@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19E5B4B11E0CD9E1002036AC /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5B4B01E0CD9E1002036AC /* ArtistTableViewCell.swift */; };
 		19E5B4B31E0CE3B9002036AC /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5B4B21E0CE3B9002036AC /* WorkTableViewCell.swift */; };
+		269389FD63C89C38DC1DD34F /* Pods_Artistry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66D4CDFF0C26F94CA10DD8C /* Pods_Artistry.framework */; };
 		A23F75351C9BA757006FA46F /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */; };
 		A23F75371C9BADB7006FA46F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75361C9BADB7006FA46F /* Work.swift */; };
 		A2D7F3091C8CE3F60097399A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F3081C8CE3F60097399A /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0297BFD7A3B5299B3126BA4C /* Pods-Artistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artistry.debug.xcconfig"; path = "Target Support Files/Pods-Artistry/Pods-Artistry.debug.xcconfig"; sourceTree = "<group>"; };
 		19E5B4B01E0CD9E1002036AC /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		19E5B4B21E0CE3B9002036AC /* WorkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
 		A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		A2D7F31C1C8CE44E0097399A /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A2D7F31E1C8CE4640097399A /* ArtistListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListViewController.swift; sourceTree = "<group>"; };
 		A2D7F3201C8CE4A30097399A /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
+		BC53F50795B9DFD4989DA623 /* Pods-Artistry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artistry.release.xcconfig"; path = "Target Support Files/Pods-Artistry/Pods-Artistry.release.xcconfig"; sourceTree = "<group>"; };
+		E66D4CDFF0C26F94CA10DD8C /* Pods_Artistry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artistry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269389FD63C89C38DC1DD34F /* Pods_Artistry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4691D391F16D159515DA996E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E66D4CDFF0C26F94CA10DD8C /* Pods_Artistry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A27835861CA8E0B600D5CEF9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,8 @@
 			children = (
 				A2D7F3071C8CE3F60097399A /* Artistry */,
 				A2D7F3061C8CE3F60097399A /* Products */,
+				EA926BD90BCD9AB09F37AC42 /* Pods */,
+				4691D391F16D159515DA996E /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -116,6 +131,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		EA926BD90BCD9AB09F37AC42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0297BFD7A3B5299B3126BA4C /* Pods-Artistry.debug.xcconfig */,
+				BC53F50795B9DFD4989DA623 /* Pods-Artistry.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +148,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D7F3171C8CE3F60097399A /* Build configuration list for PBXNativeTarget "Artistry" */;
 			buildPhases = (
+				A4F4082481237EA09A78FFC6 /* [CP] Check Pods Manifest.lock */,
 				A2D7F3011C8CE3F60097399A /* Sources */,
 				A2D7F3021C8CE3F60097399A /* Frameworks */,
 				A2D7F3031C8CE3F60097399A /* Resources */,
@@ -186,6 +212,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4F4082481237EA09A78FFC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artistry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2D7F3011C8CE3F60097399A /* Sources */ = {
@@ -314,6 +365,7 @@
 		};
 		A2D7F3181C8CE3F60097399A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0297BFD7A3B5299B3126BA4C /* Pods-Artistry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -332,6 +384,7 @@
 		};
 		A2D7F3191C8CE3F60097399A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC53F50795B9DFD4989DA623 /* Pods-Artistry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
