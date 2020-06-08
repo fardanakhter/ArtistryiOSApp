@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Install gpg
         run: brew install gnupg
+      - name: Change wrapper permissions
+        run: chmod +x ./secrets
       - name: Setup provisioning profile
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
