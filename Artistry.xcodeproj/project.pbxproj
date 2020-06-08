@@ -10,6 +10,7 @@
 		19E5B4B11E0CD9E1002036AC /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5B4B01E0CD9E1002036AC /* ArtistTableViewCell.swift */; };
 		19E5B4B31E0CE3B9002036AC /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5B4B21E0CE3B9002036AC /* WorkTableViewCell.swift */; };
 		269389FD63C89C38DC1DD34F /* Pods_Artistry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66D4CDFF0C26F94CA10DD8C /* Pods_Artistry.framework */; };
+		39790F70248EAB6D000BBE7A /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39790F6F248EAB6D000BBE7A /* exportOptions.plist */; };
 		A23F75351C9BA757006FA46F /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */; };
 		A23F75371C9BADB7006FA46F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75361C9BADB7006FA46F /* Work.swift */; };
 		A2D7F3091C8CE3F60097399A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F3081C8CE3F60097399A /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		0297BFD7A3B5299B3126BA4C /* Pods-Artistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artistry.debug.xcconfig"; path = "Target Support Files/Pods-Artistry/Pods-Artistry.debug.xcconfig"; sourceTree = "<group>"; };
 		19E5B4B01E0CD9E1002036AC /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		19E5B4B21E0CE3B9002036AC /* WorkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
+		39790F6F248EAB6D000BBE7A /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		A23F75361C9BADB7006FA46F /* Work.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		A23F753A1C9BC89A006FA46F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				A2D7F30F1C8CE3F60097399A /* Assets.xcassets */,
 				A23F753A1C9BC89A006FA46F /* Info.plist */,
 				A2D7F3111C8CE3F60097399A /* LaunchScreen.storyboard */,
+				39790F6F248EAB6D000BBE7A /* exportOptions.plist */,
 			);
 			path = Artistry;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				A2D7F3131C8CE3F60097399A /* LaunchScreen.storyboard in Resources */,
 				A2D7F3101C8CE3F60097399A /* Assets.xcassets in Resources */,
+				39790F70248EAB6D000BBE7A /* exportOptions.plist in Resources */,
 				A2D7F3261C8CE4A30097399A /* artists.json in Resources */,
 				A2D7F30E1C8CE3F60097399A /* Main.storyboard in Resources */,
 			);
