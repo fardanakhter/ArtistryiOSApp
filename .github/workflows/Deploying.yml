@@ -18,8 +18,10 @@ jobs:
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: ./.github/secrets/decrypt_secrets.sh
-      - name: Change scripts permissions
-        run: chmod +x ./.github/scripts
+      - name: Change archive_app permissions
+        run: chmod +x ./.github/scripts/archive_app.sh
+      - name: Change export_ipa permissions
+        run: chmod +x ./.github/scripts/export_ipa.sh
       - name: Archiving project
         env:
           PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
