@@ -22,6 +22,8 @@ jobs:
         run: chmod +x ./.github/scripts/archive_app.sh
       - name: Change export_ipa permissions
         run: chmod +x ./.github/scripts/export_ipa.sh
+      - name: Change publish_testflight permissions
+        run: chmod +x ./.github/scripts/publish_testflight.sh
       - name: Archiving project
         env:
           PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
