@@ -3,7 +3,7 @@
 set -eo pipefail
 
 xcodebuild -archivePath $PWD/build/Artistry.xcarchive \
-            -exportOptionsPlist Artistry/Artistry/exportOptions.plist \
+            -exportOptionsPlist Artistry/exportOptions.plist \
             -exportPath $PWD/build \
             -allowProvisioningUpdates \
             -exportArchive | xcpretty
