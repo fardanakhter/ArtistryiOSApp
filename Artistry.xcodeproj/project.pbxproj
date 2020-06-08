@@ -137,7 +137,6 @@
 				0297BFD7A3B5299B3126BA4C /* Pods-Artistry.debug.xcconfig */,
 				BC53F50795B9DFD4989DA623 /* Pods-Artistry.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -375,7 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pumpjack.sample.app;
 				PRODUCT_NAME = Artistry;
-				PROVISIONING_PROFILE_SPECIFIER = Adhoc_dist_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = Appstore_Dist_Profile;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -394,7 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pumpjack.sample.app;
 				PRODUCT_NAME = Artistry;
-				PROVISIONING_PROFILE_SPECIFIER = Adhoc_dist_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = Appstore_Dist_Profile;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
