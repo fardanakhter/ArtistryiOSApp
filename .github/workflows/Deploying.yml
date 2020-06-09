@@ -36,12 +36,9 @@ jobs:
           APPLEID_USERNAME: ${{ secrets.APPLEID_USERNAME }}
           APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}
         run: ./.github/scripts/publish_testflight.sh  
-     - name: Slack notification
+      - name: Notify slack
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_USERNAME: ThisIsMyUsername # Optional. (defaults to webhook app)
-          SLACK_CHANNEL: general # Optional. (defaults to webhook)
-          SLACK_AVATAR: repository # Optional. can be (repository, sender, an URL) (defaults to webhook app avatar)
-        uses: Ilshidur/action-slack@fb92a78
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        uses: pullreminders/slack-action@master
         with:
-        args: 'A new build has been uploaded to testflight'
+          args: '{\"channel\":\"C014VU71ZUN\",\"text\":\"Automated Build has been uploaded..\"}'
