@@ -41,4 +41,4 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: pullreminders/slack-action@master
         with:
-          args: '{\"channel\":\"C014VU71ZUN\",\"text\":\"Automated Build has been uploaded..\"}'
+          args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}
