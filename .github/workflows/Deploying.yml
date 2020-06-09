@@ -4,41 +4,48 @@ on:
     branches:
       - master
 jobs:
-  deploy:
-    name: Deploying to Testflight
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Install gpg
-        run: brew install gnupg
-      - name: Change secrets permissions
-        run: chmod +x ./.github/secrets/decrypt_secrets.sh 
-      - name: Setup provisioning profile
-        env:
-          IOS_KEYS: ${{ secrets.IOS_KEYS }}
-        run: ./.github/secrets/decrypt_secrets.sh
-      - name: Change archive_app permissions
-        run: chmod +x ./.github/scripts/archive_app.sh
-      - name: Change export_ipa permissions
-        run: chmod +x ./.github/scripts/export_ipa.sh
-      - name: Change publish_testflight permissions
-        run: chmod +x ./.github/scripts/publish_testflight.sh
-      - name: Archiving project
-        env:
-          PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-        run: ./.github/scripts/archive_app.sh
-      - name: Exporting .ipa
-        run: ./.github/scripts/export_ipa.sh
-      - name: Publishing app
-        if: success()
-        env:
-          APPLEID_USERNAME: ${{ secrets.APPLEID_USERNAME }}
-          APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}
-        run: ./.github/scripts/publish_testflight.sh  
-      - name: Notify slack
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: pullreminders/slack-action@master
-        with:
-          args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}'
+    job1:
+      deploy:
+        name: Deploying to Testflight
+        runs-on: macOS-latest
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v1
+          - name: Install gpg
+            run: brew install gnupg
+          - name: Change secrets permissions
+            run: chmod +x ./.github/secrets/decrypt_secrets.sh
+          - name: Setup provisioning profile
+            env:
+              IOS_KEYS: ${{ secrets.IOS_KEYS }}
+            run: ./.github/secrets/decrypt_secrets.sh
+          - name: Change archive_app permissions
+            run: chmod +x ./.github/scripts/archive_app.sh
+          - name: Change export_ipa permissions
+            run: chmod +x ./.github/scripts/export_ipa.sh
+          - name: Change publish_testflight permissions
+            run: chmod +x ./.github/scripts/publish_testflight.sh
+          - name: Archiving project
+            env:
+              PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+            run: ./.github/scripts/archive_app.sh
+          - name: Exporting .ipa
+            run: ./.github/scripts/export_ipa.sh
+          - name: Publishing app
+            if: success()
+            env:
+              APPLEID_USERNAME: ${{ secrets.APPLEID_USERNAME }}
+              APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}
+            run: ./.github/scripts/publish_testflight.sh
+    job2:
+        needs: job1
+        deploy:
+            name: Notifying Slack Bot
+            runs-on: ubuntu-latest
+            steps:
+                - name: Notify slack
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                uses: pullreminders/slack-action@master
+                with:
+                    args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}'
