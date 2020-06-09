@@ -37,7 +37,7 @@ jobs:
         APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}    
       run: ./.github/scripts/publish_testflight.sh 
   job2:
-    needs: job1
+    needs: [job1]
     name: Notifying Slack Bot
     runs-on: ubuntu-latest
     steps:
@@ -46,5 +46,5 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       uses: pullreminders/slack-action@master
       with:
-        args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}'
+        args: '{\"channel\":\"C014VU71ZUN\",\"text\":\"Automated Build has been uploaded to testflight!\"}'
 
