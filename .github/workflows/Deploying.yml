@@ -37,7 +37,6 @@ jobs:
         APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}    
       run: ./.github/scripts/publish_testflight.sh 
   job2:
-    needs: job1
     name: Notifying Slack Bot
     runs-on: ubuntu-latest
     steps:
