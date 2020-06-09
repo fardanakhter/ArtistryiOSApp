@@ -43,9 +43,10 @@ jobs:
             name: Notifying Slack Bot
             runs-on: ubuntu-latest
             steps:
-                - name: Notify slack
-                env:
-                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-                uses: pullreminders/slack-action@master
-                with:
-                    args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}'
+            - name: Notify slack
+            env:
+              SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+            uses: pullreminders/slack-action@master
+            with:
+              args: '{channel: C014VU71ZUN , text: Automated Build has been uploaded..}'
+
