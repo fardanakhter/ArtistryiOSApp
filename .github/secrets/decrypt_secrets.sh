@@ -30,6 +30,6 @@ security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychai
 
 # Import App Store Connect private keys.
 mkdir -p ~/.appstoreconnect/private_keys
-cp secrets/keys/* ~/.appstoreconnect/private_keys/
+cp ./.github/secrets/keys/* ~/.appstoreconnect/private_keys/
 
 ls -l ~/.appstoreconnect/private_keys/
