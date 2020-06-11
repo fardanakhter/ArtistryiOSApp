@@ -29,7 +29,7 @@ security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
 
 # Import App Store Connect private keys.
-mkdir -p ~/.appstoreconnect/private_keys
-cp secrets/keys/* ~/.appstoreconnect/private_keys/
-
-ls -l ~/.appstoreconnect/private_keys/
+#mkdir -p ~/.appstoreconnect/private_keys
+#cp secrets/keys/* ~/.appstoreconnect/private_keys/
+#
+#ls -l ~/.appstoreconnect/private_keys/
