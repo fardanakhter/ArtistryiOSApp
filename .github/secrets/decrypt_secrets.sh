@@ -19,7 +19,7 @@ security create-keychain -p "" build.keychain
 security import ./.github/secrets/cert_dist.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
 
 # Import Apple Worldwide Developer Relations Certification Authority certificate
-security import ./.github/secrets/AWWD.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
+#security import ./.github/secrets/AWWD.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
 #
 
 security list-keychains -s ~/Library/Keychains/build.keychain
